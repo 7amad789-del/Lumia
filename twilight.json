@@ -1,0 +1,687 @@
+{
+  "name": {
+    "ar": "لوميا",
+    "en": "Lumia"
+  },
+  "repository": "https://github.com/REPLACE-WITH-YOUR-ACCOUNT/lumia-salla-theme",
+  "author_email": "support@lumia.sa",
+  "features": [
+    "fonts",
+    "color",
+    "breadcrumb",
+    "filters"
+  ],
+  "settings": [
+    {
+      "id": "show_announcement",
+      "key": "6b5755d7-1131-4a07-bd7d-40ae699d1a12",
+      "type": "boolean",
+      "format": "switch",
+      "label": "إظهار الشريط العلوي",
+      "icon": "sicon-toggle-off",
+      "required": false,
+      "value": true,
+      "selected": true
+    },
+    {
+      "id": "announcement_text",
+      "key": "16a222e3-beeb-4bd1-b946-2dd152633063",
+      "type": "string",
+      "format": "text",
+      "label": "نص الشريط العلوي",
+      "icon": "sicon-format-text-alt",
+      "required": false,
+      "value": "شحن سريع لجميع مناطق المملكة — خيارات دفع آمنة عبر سلة"
+    },
+    {
+      "id": "guarantee_text",
+      "key": "3b00ff63-6259-47d4-bb9c-8ec85a131d65",
+      "type": "string",
+      "format": "text",
+      "label": "نص الضمان العام",
+      "icon": "sicon-format-text-alt",
+      "required": false,
+      "value": "الاستبدال والاسترجاع وفق سياسة المتجر المنشورة"
+    },
+    {
+      "id": "shipping_text",
+      "key": "7028f3b7-ecff-4440-9aaf-7d35fb737cc9",
+      "type": "string",
+      "format": "text",
+      "label": "نص الشحن العام",
+      "icon": "sicon-format-text-alt",
+      "required": false,
+      "value": "تظهر رسوم ومدة الشحن الفعلية أثناء إتمام الطلب"
+    },
+    {
+      "id": "medical_disclaimer",
+      "key": "d8d0b028-8e71-4064-9459-829531e5eb38",
+      "type": "string",
+      "format": "textarea",
+      "label": "تنبيه الاستخدام",
+      "icon": "sicon-format-text-alt",
+      "required": false,
+      "value": "هذا المنتج مخصص للراحة العامة وليس بديلاً عن الاستشارة أو العلاج الطبي. راجعي مختصاً عند استمرار الألم أو وجود حالة صحية."
+    }
+  ],
+  "components": [
+    {
+      "key": "501b586a-ba9c-47fc-9a12-267bf97b9a2d",
+      "title": {
+        "ar": "لوميا: الواجهة الرئيسية",
+        "en": "Lumia Hero"
+      },
+      "icon": "sicon-image",
+      "path": "home.lumia-hero",
+      "is_default": true,
+      "fields": [
+        {
+          "id": "product",
+          "key": "c79d44f6-4e55-4595-ba86-01e14b0dad8a",
+          "type": "items",
+          "format": "dropdown-list",
+          "label": "منتج لوميا",
+          "icon": "sicon-keyboard_arrow_down",
+          "required": false,
+          "source": "products",
+          "selected": [],
+          "options": [],
+          "multichoice": false,
+          "searchable": true,
+          "value": []
+        },
+        {
+          "id": "eyebrow",
+          "key": "afcf4bb3-2418-48a7-85cf-a8f86bf8d10d",
+          "type": "string",
+          "format": "text",
+          "label": "النص العلوي",
+          "icon": "sicon-format-text-alt",
+          "required": false,
+          "value": "راحة ذكية تبدأ خلال ثوانٍ"
+        },
+        {
+          "id": "title",
+          "key": "3c2300a9-a315-495c-9479-18e0f317205b",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان",
+          "icon": "sicon-format-text-alt",
+          "required": false,
+          "value": "لأن راحتكِ ليست رفاهية"
+        },
+        {
+          "id": "subtitle",
+          "key": "5279f091-195b-4978-bc1c-5d4bff3b4673",
+          "type": "string",
+          "format": "textarea",
+          "label": "الوصف",
+          "icon": "sicon-format-text-alt",
+          "required": false,
+          "value": "جهاز لانا من لوميا يجمع الحرارة الموجهة والمساج بالاهتزاز في تصميم لاسلكي خفيف."
+        },
+        {
+          "id": "hero_image",
+          "key": "c60546df-4644-444a-bb96-d7917b2ba1ba",
+          "type": "string",
+          "format": "image",
+          "label": "صورة مخصصة للواجهة",
+          "icon": "sicon-format-text-alt",
+          "required": false
+        },
+        {
+          "id": "button_text",
+          "key": "ac4ec8ad-a468-48be-9bbc-88d127402a8a",
+          "type": "string",
+          "format": "text",
+          "label": "نص الزر",
+          "icon": "sicon-format-text-alt",
+          "required": false,
+          "value": "اطلبي لوميا الآن"
+        },
+        {
+          "id": "coupon_code",
+          "key": "07ef3103-9e8f-4f8d-9017-b55f397dee50",
+          "type": "string",
+          "format": "text",
+          "label": "كود الخصم",
+          "icon": "sicon-format-text-alt",
+          "required": false,
+          "value": "LUMIA10"
+        },
+        {
+          "id": "shipping_text",
+          "key": "8e2ace62-2f9e-42da-8816-75489ff5edd7",
+          "type": "string",
+          "format": "text",
+          "label": "نص الشحن",
+          "icon": "sicon-format-text-alt",
+          "required": false,
+          "value": "شحن سريع — تظهر المدة الفعلية عند إتمام الطلب"
+        },
+        {
+          "id": "guarantee_text",
+          "key": "07dc36fa-df78-4e56-b307-d32b97e70a66",
+          "type": "string",
+          "format": "text",
+          "label": "نص الضمان",
+          "icon": "sicon-format-text-alt",
+          "required": false,
+          "value": "ضمان واسترجاع وفق سياسة المتجر المنشورة"
+        }
+      ]
+    },
+    {
+      "key": "ec4dd4b3-61c0-44a3-bf32-8198cb767ea2",
+      "title": {
+        "ar": "لوميا: مستشار الاستخدام",
+        "en": "Lumia Advisor"
+      },
+      "icon": "sicon-magic-wand",
+      "path": "home.lumia-advisor",
+      "is_default": true,
+      "fields": [
+        {
+          "id": "title",
+          "key": "0ef09451-0a8f-4b43-9613-38996348ea64",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان",
+          "icon": "sicon-format-text-alt",
+          "required": false,
+          "value": "اختاري جلسة الراحة المناسبة لكِ"
+        },
+        {
+          "id": "subtitle",
+          "key": "7c5c6ab7-ecd3-4c1a-8820-91093ef32060",
+          "type": "string",
+          "format": "textarea",
+          "label": "الوصف",
+          "icon": "sicon-format-text-alt",
+          "required": false,
+          "value": "أجيبي عن سؤالين للحصول على اقتراح مبدئي لإعداد الحرارة والاهتزاز."
+        }
+      ]
+    },
+    {
+      "key": "7059ae87-d5c8-461a-bbf6-8adff94bfbf0",
+      "title": {
+        "ar": "لوميا: المميزات",
+        "en": "Lumia Features"
+      },
+      "icon": "sicon-star",
+      "path": "home.lumia-features",
+      "is_default": true,
+      "fields": [
+        {
+          "id": "title",
+          "key": "598e7042-20ac-489f-95ae-c871148e61b5",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان",
+          "icon": "sicon-format-text-alt",
+          "required": false,
+          "value": "تقنية مصممة لراحتكِ"
+        },
+        {
+          "id": "features",
+          "key": "f395d09f-e3a9-4e2c-bccf-e726c2ab47c9",
+          "type": "collection",
+          "format": "collection",
+          "label": "المميزات",
+          "icon": "sicon-list-add",
+          "required": false,
+          "value": [
+            {
+              "features.icon": "⚡",
+              "features.title": "تسخين خاطف خلال 3 ثوانٍ",
+              "features.description": "حرارة موجهة بثلاث درجات قابلة للاختيار: 50° و55° و60°.",
+              "features.badge": "حرارة سريعة"
+            },
+            {
+              "features.icon": "〰️",
+              "features.title": "4 أنماط مساج بالاهتزاز",
+              "features.description": "أنماط اهتزاز متعددة للاسترخاء وتخفيف التشنج العضلي.",
+              "features.badge": "مساج ذكي"
+            },
+            {
+              "features.icon": "🧸",
+              "features.title": "بطانة مخملية ناعمة",
+              "features.description": "ملمس داخلي لطيف ومريح للاستخدام اليومي.",
+              "features.badge": "راحة أعلى"
+            },
+            {
+              "features.icon": "🔋",
+              "features.title": "لاسلكي وبطارية طويلة",
+              "features.description": "تصميم خفيف قابل للحمل مع شحن USB Type‑C.",
+              "features.badge": "حرية حركة"
+            },
+            {
+              "features.icon": "🛡️",
+              "features.title": "إيقاف أمان تلقائي",
+              "features.description": "يتوقف تلقائياً بعد مدة الجلسة المحددة للمساعدة على الاستخدام الآمن.",
+              "features.badge": "حماية إضافية"
+            },
+            {
+              "features.icon": "🔇",
+              "features.title": "تشغيل هادئ",
+              "features.description": "محرك منخفض الضوضاء للاستخدام في المنزل أو المكتب.",
+              "features.badge": "أقل من 30dB"
+            }
+          ],
+          "item_label": "ميزة",
+          "minLength": 3,
+          "maxLength": 8,
+          "fields": [
+            {
+              "id": "features.icon",
+              "key": "fa80e217-260a-476c-ab5b-3156419520a2",
+              "type": "string",
+              "format": "text",
+              "label": "الأيقونة",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            },
+            {
+              "id": "features.title",
+              "key": "c3fa634a-7477-4e74-a55b-41f9960b0af3",
+              "type": "string",
+              "format": "text",
+              "label": "العنوان",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            },
+            {
+              "id": "features.description",
+              "key": "479ad025-918e-4626-9171-c1c2e75907ab",
+              "type": "string",
+              "format": "textarea",
+              "label": "الوصف",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            },
+            {
+              "id": "features.badge",
+              "key": "5c9310dd-f25c-46e2-84dd-11857422d35a",
+              "type": "string",
+              "format": "text",
+              "label": "الشارة",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "543f18d4-aa50-400d-ab26-d0850529ab58",
+      "title": {
+        "ar": "لوميا: المقارنة",
+        "en": "Lumia Comparison"
+      },
+      "icon": "sicon-list",
+      "path": "home.lumia-comparison",
+      "is_default": true,
+      "fields": [
+        {
+          "id": "title",
+          "key": "cc21d2f5-6fb2-4221-bfb7-f7cddc0473c8",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان",
+          "icon": "sicon-format-text-alt",
+          "required": false,
+          "value": "لماذا تختارين لانا؟"
+        },
+        {
+          "id": "rows",
+          "key": "b64db36d-d39d-4286-b91e-d4c49ed958bf",
+          "type": "collection",
+          "format": "collection",
+          "label": "صفوف المقارنة",
+          "icon": "sicon-list-add",
+          "required": false,
+          "value": [
+            {
+              "rows.feature": "سرعة البدء",
+              "rows.lumia": "خلال ثوانٍ",
+              "rows.traditional": "15–20 دقيقة",
+              "rows.other": "30–60 دقيقة"
+            },
+            {
+              "rows.feature": "سهولة الحركة",
+              "rows.lumia": "لاسلكي وخفيف",
+              "rows.traditional": "مقيد وثقيل",
+              "rows.other": "لا يوفر حرارة موضعية"
+            },
+            {
+              "rows.feature": "التدليك",
+              "rows.lumia": "4 أنماط اهتزاز",
+              "rows.traditional": "غير متوفر",
+              "rows.other": "غير متوفر"
+            },
+            {
+              "rows.feature": "الاستخدام المتكرر",
+              "rows.lumia": "جهاز قابل لإعادة الاستخدام",
+              "rows.traditional": "يتطلب تجهيزاً متكرراً",
+              "rows.other": "شراء مستمر"
+            }
+          ],
+          "item_label": "صف",
+          "minLength": 2,
+          "maxLength": 8,
+          "fields": [
+            {
+              "id": "rows.feature",
+              "key": "3545ee7d-839e-48eb-a8db-6f1b0b6f8856",
+              "type": "string",
+              "format": "text",
+              "label": "المعيار",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            },
+            {
+              "id": "rows.lumia",
+              "key": "08c730c0-3446-4dd8-b672-daff6ace746a",
+              "type": "string",
+              "format": "text",
+              "label": "لوميا لانا",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            },
+            {
+              "id": "rows.traditional",
+              "key": "ec955820-9c47-4e76-b5ed-a2474da99b33",
+              "type": "string",
+              "format": "text",
+              "label": "البديل التقليدي",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            },
+            {
+              "id": "rows.other",
+              "key": "69048b70-f5bc-4f73-8f11-01238d08bcf9",
+              "type": "string",
+              "format": "text",
+              "label": "حل آخر",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "2a466059-5132-47e5-b12a-de53532128fd",
+      "title": {
+        "ar": "لوميا: طريقة الاستخدام",
+        "en": "Lumia How to use"
+      },
+      "icon": "sicon-help",
+      "path": "home.lumia-how-to",
+      "is_default": true,
+      "fields": [
+        {
+          "id": "title",
+          "key": "4c4dc324-dbc4-4e00-8e42-e3f9d6792b90",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان",
+          "icon": "sicon-format-text-alt",
+          "required": false,
+          "value": "أربع خطوات لراحة أسهل"
+        },
+        {
+          "id": "steps",
+          "key": "1ad5e3b9-fad6-4a9f-bde6-5133b2e9a9e0",
+          "type": "collection",
+          "format": "collection",
+          "label": "الخطوات",
+          "icon": "sicon-list-add",
+          "required": false,
+          "value": [
+            {
+              "steps.number": "1",
+              "steps.title": "ثبّتي الحزام",
+              "steps.description": "ضعي الجهاز على منطقة البطن أو أسفل الظهر واضبطي الحزام براحة."
+            },
+            {
+              "steps.number": "2",
+              "steps.title": "اختاري الحرارة",
+              "steps.description": "اختاري درجة الحرارة المناسبة لكِ من لوحة التحكم."
+            },
+            {
+              "steps.number": "3",
+              "steps.title": "فعّلي المساج",
+              "steps.description": "انتقلي بين أنماط الاهتزاز حتى تجدي النمط الأكثر راحة."
+            },
+            {
+              "steps.number": "4",
+              "steps.title": "استرخي",
+              "steps.description": "استخدمي الجهاز خلال الجلسة الموصى بها ثم اتركيه يبرد قبل التخزين."
+            }
+          ],
+          "item_label": "خطوة",
+          "minLength": 3,
+          "maxLength": 6,
+          "fields": [
+            {
+              "id": "steps.number",
+              "key": "0acd93ed-b67c-4b87-9bbd-7721cd0b0c46",
+              "type": "string",
+              "format": "text",
+              "label": "الرقم",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            },
+            {
+              "id": "steps.title",
+              "key": "6d42a010-bed1-4e10-b794-448a99ad1685",
+              "type": "string",
+              "format": "text",
+              "label": "العنوان",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            },
+            {
+              "id": "steps.description",
+              "key": "ab28e9b5-0b28-45cf-9a31-b3847f84ac4d",
+              "type": "string",
+              "format": "textarea",
+              "label": "الوصف",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "abf00356-f965-40cb-8cb2-518207de836c",
+      "title": {
+        "ar": "لوميا: آراء العميلات",
+        "en": "Lumia Reviews"
+      },
+      "icon": "sicon-chat",
+      "path": "home.lumia-reviews",
+      "is_default": true,
+      "fields": [
+        {
+          "id": "title",
+          "key": "7785786c-f193-421a-99f6-df8b5bf01ddf",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان",
+          "icon": "sicon-format-text-alt",
+          "required": false,
+          "value": "تجارب عميلات لوميا"
+        },
+        {
+          "id": "confirm_reviews_are_real",
+          "key": "66ec259e-4c16-43fc-90ab-f05d6b00bf5a",
+          "type": "boolean",
+          "format": "switch",
+          "label": "أؤكد أن الآراء المنشورة حقيقية وموثقة",
+          "icon": "sicon-toggle-off",
+          "required": false,
+          "value": false,
+          "selected": false
+        },
+        {
+          "id": "reviews",
+          "key": "89bde7ee-7e45-4eb2-9b10-4d83c04471dd",
+          "type": "collection",
+          "format": "collection",
+          "label": "نماذج الآراء",
+          "icon": "sicon-list-add",
+          "required": false,
+          "value": [],
+          "item_label": "رأي",
+          "minLength": 1,
+          "maxLength": 8,
+          "fields": [
+            {
+              "id": "reviews.author",
+              "key": "cd763b17-fef9-4cd8-a151-66f81dd28ae2",
+              "type": "string",
+              "format": "text",
+              "label": "الاسم",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            },
+            {
+              "id": "reviews.city",
+              "key": "99b8b781-ff1e-4492-897d-8f52d451bd25",
+              "type": "string",
+              "format": "text",
+              "label": "المدينة",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            },
+            {
+              "id": "reviews.rating",
+              "key": "68f21529-050e-4f22-a2fd-867636977779",
+              "type": "number",
+              "format": "integer",
+              "label": "التقييم",
+              "icon": "sicon-pencil-ruler",
+              "required": false
+            },
+            {
+              "id": "reviews.title",
+              "key": "b6c99baf-2485-414e-9342-7c84812aada4",
+              "type": "string",
+              "format": "text",
+              "label": "عنوان الرأي",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            },
+            {
+              "id": "reviews.content",
+              "key": "f1d2f6ec-6df4-4600-ba37-3626ddaa1de3",
+              "type": "string",
+              "format": "textarea",
+              "label": "النص",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            },
+            {
+              "id": "reviews.variant",
+              "key": "160861b2-bdbe-41e1-84f7-25db4e79b324",
+              "type": "string",
+              "format": "text",
+              "label": "الخيار",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "key": "27bf8974-4765-4564-899f-daf6b969b572",
+      "title": {
+        "ar": "لوميا: الأسئلة الشائعة",
+        "en": "Lumia FAQ"
+      },
+      "icon": "sicon-question",
+      "path": "home.lumia-faq",
+      "is_default": true,
+      "fields": [
+        {
+          "id": "title",
+          "key": "6cd651da-dfb6-41a7-9d0b-86e19d4ebdbb",
+          "type": "string",
+          "format": "text",
+          "label": "العنوان",
+          "icon": "sicon-format-text-alt",
+          "required": false,
+          "value": "أسئلة شائعة"
+        },
+        {
+          "id": "items",
+          "key": "9c19d393-e4df-4912-bdc6-5edbe18b469e",
+          "type": "collection",
+          "format": "collection",
+          "label": "الأسئلة",
+          "icon": "sicon-list-add",
+          "required": false,
+          "value": [
+            {
+              "items.question": "كيف يعمل جهاز لانا؟",
+              "items.answer": "يجمع الجهاز بين الحرارة الموضعية والاهتزاز بدرجات وأنماط متعددة لتوفير تجربة مريحة وقابلة للتخصيص."
+            },
+            {
+              "items.question": "هل الجهاز آمن للاستخدام المباشر؟",
+              "items.answer": "استخدميه وفق دليل المنتج، ولا تضعيه على جلد مصاب أو أثناء النوم. أوقفي الاستخدام عند الشعور بانزعاج غير معتاد."
+            },
+            {
+              "items.question": "كم تدوم البطارية؟",
+              "items.answer": "تعتمد المدة على مستوى الحرارة ونمط الاهتزاز. راجعي مواصفات المنتج الفعلية التي تدخلينها في لوحة سلة."
+            },
+            {
+              "items.question": "هل يمكن ارتداؤه تحت الملابس؟",
+              "items.answer": "التصميم خفيف وقابل للتعديل، لكن يُفضّل التأكد من ثباته وعدم الضغط الزائد أثناء الحركة."
+            },
+            {
+              "items.question": "ما سياسة الضمان والاسترجاع؟",
+              "items.answer": "تظهر السياسة الفعلية بحسب ما تعتمدينه في متجر سلة. عدّلي هذا النص ليتطابق مع سياسة متجرك المنشورة."
+            },
+            {
+              "items.question": "ما مدة التوصيل وطرق الدفع؟",
+              "items.answer": "تعرض سلة طرق الدفع والشحن المفعلة في متجرك تلقائياً. عدّلي هذا النص حسب شركات الشحن والمدد المعتمدة."
+            }
+          ],
+          "item_label": "سؤال",
+          "minLength": 1,
+          "maxLength": 12,
+          "fields": [
+            {
+              "id": "items.question",
+              "key": "f2e857aa-20f7-4fae-9d6f-15377bbaf089",
+              "type": "string",
+              "format": "text",
+              "label": "السؤال",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            },
+            {
+              "id": "items.answer",
+              "key": "3c9813c3-ecfb-4f27-bf16-44cd0299d5de",
+              "type": "string",
+              "format": "textarea",
+              "label": "الإجابة",
+              "icon": "sicon-format-text-alt",
+              "required": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "support_url": "https://lumia.sa",
+  "description": {
+    "ar": "ثيم متجر لوميا المخصص على منصة سلة",
+    "en": "Custom Lumia storefront theme for Salla"
+  }
+}
